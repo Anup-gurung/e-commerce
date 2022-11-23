@@ -1,0 +1,305 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.header{
+    background:#508cb5;
+    background-attachment: fixed;
+    height:100vh;
+    background-size:cover;
+    background-image:linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)), url(Images/backy.gif);
+   
+ 
+}
+
+.navbar{
+    display: flex;
+    align-items: center;
+    padding: 20px;
+ 
+   
+}
+.bcolor{
+    /*---------------------- background-color: rgb(142, 98, 98); */
+  margin-left: 2%;
+   margin-right: 2%;
+}
+nav{
+    flex: 1;
+    text-align: right;
+
+}
+nav ul{
+    display: inline-block;
+    /*---------------we keep none in below code to clear the bullet dots------------------- */
+    list-style-type: none; 
+}
+nav ul li{
+    display: inline-block;
+    margin: 1.5rem;
+    
+}
+nav ul li a:hover{
+   color: green;
+    border-radius: 50%;
+    padding-left:8px ;
+}
+a{
+    /* ------------code below erase the under line--------------------  */
+    text-decoration: none;
+    color:blue;
+    font-size: 20px;
+}
+.col2{
+    flex-basis: 50%;
+    min-width: 30rem;   
+    color:whitesmoke;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+    
+
+}
+.col2 a{
+    font-weight: 600;
+    font-size: 25px;
+}
+.button{
+    display: inline-block;
+    background:rgb(108, 99, 205);
+     color:gainsboro;
+    padding: 8px 30px;
+    margin: 30px 0;  
+      border-radius: 30px;
+      margin-left: 10rem;
+      transition: 0.5s;
+}
+.button:hover{
+    background:rgb(182, 119, 130);
+}
+
+/*-----------------------product styling------------------*/
+.product{
+    padding: 40px;
+    text-align: center;
+
+}
+
+.items{
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+}
+/*--------------------styling images-----------------------*/
+.p-img{
+
+    width: 100%;
+    overflow: hidden;
+}
+.p-img img{
+ width: 90%;
+ max-height: fit-content;
+ 
+}
+
+/*----------------------styling card-----------------------*/
+.item:hover{
+transition: 0.5s;
+
+}
+.card-body{
+    background-color:#fff;
+    text-align: center;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+.card-tittle{
+    font-size: 1.2rem;
+}
+
+
+
+.card-description{
+    color:#3d6476;
+}
+.card-price{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-style: italic;
+}
+/*---------------------------------- editing buttons------------------------- */
+button{
+    display: inline-block;
+    background:#c0e0ec;
+   
+     color:rgb(51, 7, 7);
+    padding: 8px 30px;
+    margin: 30px 0;  
+    border-radius: 15px;
+    
+    transition: 0.5s;
+}
+button:hover{
+    background:#489c8a;
+
+}
+/*-------------- brands edits ------------------*/
+.n-row{
+    display: flex;
+    position:absolute;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-around; 
+     margin-top: 9rem;
+  
+}
+.col5{
+    flex-basis: 20%;
+    cursor: pointer;
+}
+
+.col5 img{
+   width: 30%; 
+   margin-left: 9rem;
+   filter: grayscale(89%);
+   transition: 0.5s;
+}
+.col5 :hover{
+    filter: grayscale(0);
+    transition: 0.5s;
+}
+.nike img{
+    width: 45%;
+}
+/*---------footer--------*/
+.footer{
+  
+    margin-top: 15rem;
+    background: radial-gradient(#fff,#aed7ea);
+}
+.f-contain{
+    max-width: 1080px;
+    margin: auto;
+    padding: 70px 0;
+
+}
+ul{
+    list-style: none;
+}
+.f-row{
+    display: flex;
+    flex-wrap: wrap;
+}
+.footer-col{
+    width: 25%;
+}
+.footer-col h4{
+    font-size: 18px;
+    color: rgba(222, 29, 29, 0.981);
+    text-transform: capitalize;
+    margin-bottom: 3rem;
+}
+.footer-col ul li:not(:last-child){
+    margin-bottom: 10px;
+}
+.footer-col ul li a{
+    font-size: 16px;
+    text-transform: capitalize;
+    /* color:rgb(84, 0, 105); */
+    text-decoration: none;
+    font-weight: 300;
+    color:rgb(5, 33, 116) ;
+}
+.footer-col ul li a:hover
+{
+    color: coral;
+    padding-left:8px ;
+}
+
+
+
+/*----------grid styling--------------*/
+.grid-container{
+    display: grid;
+    grid-template-columns: 2% auto 2%;
+
+}
+
+.nested-grid-container{
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    grid-column-start: 2;
+    grid-column-end: 3;
+    row-gap: 30px;
+    column-gap: 30px;
+}
+.product{
+    grid-column-start: 1;
+    grid-column-end: 5;
+}
+    /*----------------responsive-----------------*/
+    @media (max-width: 800px) {
+        .nested-grid-container {
+          grid-template-columns: auto auto auto;
+        }
+        .product {
+          grid-column-start: 1;
+          grid-column-end: 4;
+        }
+        .col5 img{
+            width: 30%; 
+            margin-left: 3rem;
+            filter: grayscale(89%);
+            transition: 0.5s;
+            margin-top: 2.6rem;
+         }
+ 
+      }
+      
+  
+  @media (max-width: 425px) {
+    .nested-grid-container {
+      grid-template-columns: auto auto;
+      row-gap: 25px;
+    }
+  
+    .product {
+      grid-column-start: 1;
+      grid-column-end: 3;
+    }
+    .col5 img{
+        width: 100%; 
+        margin-left: 2rem;
+        filter: grayscale(89%);
+        transition: 0.5s;
+        margin-top: 2.6rem;
+     }
+ 
+  }
+  @media (max-width: 320px) {
+    .nested-grid-container {
+      grid-template-columns: auto;
+      row-gap: 25px;
+    }
+  
+    .product {
+      grid-column-start: 1;
+      grid-column-end: 2;
+    }
+    .col5 img{
+        width: 50%; 
+        margin-left: 2rem;
+        filter: grayscale(89%);
+        transition: 0.5s;
+        margin-top: 2.6rem;
+     }
+     a{
+        /* code below erase the under line  */
+        text-decoration: none;
+        color:whitesmoke;
+        font-size: 15px;
+    }
+ 
+  }
+  
